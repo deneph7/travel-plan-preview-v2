@@ -157,7 +157,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
     <div class="hero-dates">2025-05-23 ~ 2025-05-26</div>
     <div class="subtitle">엄마 + 고2 딸, 모녀 여행 · 고2 딸이 즐거운 여행 — 딸 취향 우선; 엄마도 편한 여행 — 무리한 도보 이동 최소화</div>
     <div class="meta-tags">
-      <span class="meta-tag">✈️ GMP → HND (KE2101)</span><span class="meta-tag">👥 엄마 + 고2 딸, 모녀 여행</span><span class="meta-tag">🎯 일본 스트리트 패션·디즈니·애니메이션</span><span class="meta-tag">🌡 15.6~24.8°C</span>
+      <span class="meta-tag">✈️ GMP → HND (KE2101) 2시간 20분 09:00→11:20</span><span class="meta-tag">👥 엄마 + 고2 딸, 모녀 여행</span><span class="meta-tag">🎯 일본 스트리트 패션·디즈니·애니메이션</span><span class="meta-tag">🌡 15.6~24.8°C</span>
     </div>
   </div></div>
 
@@ -202,17 +202,19 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   
   <div class="filter-tabs" id="placesFilter">
-    <button class="filter-tab active" data-filter="all" onclick="filterPlaces('all')">📍 전체 <span class="filter-count">(13)</span></button>
+    <button class="filter-tab active" data-filter="all" onclick="filterPlaces('all')">📍 전체 <span class="filter-count">(31)</span></button>
     
     <button class="filter-tab" data-filter="accommodation" onclick="filterPlaces('accommodation')">🏨 숙소 <span class="filter-count">(1)</span></button>
     
-    <button class="filter-tab" data-filter="restaurant" onclick="filterPlaces('restaurant')">🍽 맛집 <span class="filter-count">(1)</span></button>
+    <button class="filter-tab" data-filter="restaurant" onclick="filterPlaces('restaurant')">🍽 맛집 <span class="filter-count">(10)</span></button>
+    
+    <button class="filter-tab" data-filter="cafe" onclick="filterPlaces('cafe')">☕ 카페 <span class="filter-count">(3)</span></button>
     
     <button class="filter-tab" data-filter="attraction" onclick="filterPlaces('attraction')">⛩️ 관광 <span class="filter-count">(6)</span></button>
     
     <button class="filter-tab" data-filter="theme_park" onclick="filterPlaces('theme_park')">🏰 테마파크 <span class="filter-count">(2)</span></button>
     
-    <button class="filter-tab" data-filter="shopping" onclick="filterPlaces('shopping')">🛍 쇼핑 <span class="filter-count">(3)</span></button>
+    <button class="filter-tab" data-filter="shopping" onclick="filterPlaces('shopping')">🛍 쇼핑 <span class="filter-count">(4)</span></button>
     
   </div>
 
@@ -300,33 +302,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="shopping" data-idx="3" onclick="toggleSpot(this, 3)">
-      <div class="spot-card-header">
-        <div class="spot-icon" style="background:#FF69B418">🛍</div>
-        <div class="spot-info">
-          <div class="spot-name">애니메이트 이케부쿠로 본점</div>
-          <div class="spot-name-en">アニメイト池袋本店</div>
-          <div class="spot-tags">
-            <span class="spot-type" style="background:#FF69B418;color:#FF69B4">shopping</span>
-            <span class="spot-rating">★★★★☆</span><span class="spot-rating-text">4.5</span>
-            
-          </div>
-        </div>
-      </div>
-      <div class="spot-detail" style="display:none" id="spotDetail3">
-        <div class="spot-notes">세계 최대 애니메이션 전문점 (기네스 인증). 이케부쿠로역 동쪽출구 도보 5분. 단, 5/23 동선상 하라주쿠/시부야에서 이케부쿠로는 추가 30분 소요로 시간 배분 주의.</div>
-        <div class="spot-detail-row"><span class="icon">📍</span> Toshima-ku, Higashi-Ikebukuro 1-20-7, Tokyo</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'daily': '10:00-21:00'}</div>
-        
-        <div class="spot-notes" style="color:var(--accent)">💡 5/23 동선 고려 시 하라주쿠→시부야가 도보 가능 거리라 효율적. 이케부쿠로는 별도 전철 필요. 시간 여유에 따라 선택.</div>
-        <div class="spot-actions">
-          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
-          <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.7295,139.717&travelmode=walking" target="_blank" rel="noopener" onclick="event.stopPropagation()">🧭 길찾기</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="spot-card" data-cat="restaurant" data-idx="4" onclick="toggleSpot(this, 4)">
+    <div class="spot-card" data-cat="restaurant" data-idx="3" onclick="toggleSpot(this, 3)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#E8454518">🍽</div>
         <div class="spot-info">
@@ -339,7 +315,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail4">
+      <div class="spot-detail" style="display:none" id="spotDetail3">
         <div class="spot-notes">야키니쿠 전문점. 호텔 근처 이크스피아리 내 위치. 디너 예산 약 ¥4,000-6,000/인.</div>
         <div class="spot-detail-row"><span class="icon">📍</span> Ikspiari, 1-4 Maihama, Urayasu, Chiba</div>
         <div class="spot-detail-row"><span class="icon">🕐</span> {'lunch': '11:00-16:00 (L.O. 16:00)', 'dinner':...</div>
@@ -352,7 +328,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="theme_park" data-idx="5" onclick="toggleSpot(this, 5)">
+    <div class="spot-card" data-cat="theme_park" data-idx="4" onclick="toggleSpot(this, 4)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#7B68EE18">🏰</div>
         <div class="spot-info">
@@ -365,7 +341,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail5">
+      <div class="spot-detail" style="display:none" id="spotDetail4">
         <div class="spot-notes">도쿄 디즈니 리조트의 랜드 파크. 미녀와 야수 에리어가 v1 요청 핵심.</div>
         <div class="spot-detail-row"><span class="icon">📍</span> 1-1 Maihama, Urayasu, Chiba 279-8511</div>
         <div class="spot-detail-row"><span class="icon">🕐</span> {'typical': '09:00-21:00', 'note': '일자별 상이, 공식앱 확인 필수'}</div>
@@ -378,7 +354,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="6" onclick="toggleSpot(this, 6)">
+    <div class="spot-card" data-cat="attraction" data-idx="5" onclick="toggleSpot(this, 5)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -391,7 +367,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail6">
+      <div class="spot-detail" style="display:none" id="spotDetail5">
         <div class="spot-notes">로프드랍(개장 즉시) 1순위 또는 Premier Access 구매 권장. 대기시간 2~3시간 빈번.</div>
         
         
@@ -404,7 +380,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="7" onclick="toggleSpot(this, 7)">
+    <div class="spot-card" data-cat="attraction" data-idx="6" onclick="toggleSpot(this, 6)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -417,7 +393,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail7">
+      <div class="spot-detail" style="display:none" id="spotDetail6">
         <div class="spot-notes">Beauty and the Beast 다음 2순위. 혁신적 트랙리스 라이드.</div>
         
         
@@ -430,7 +406,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="theme_park" data-idx="8" onclick="toggleSpot(this, 8)">
+    <div class="spot-card" data-cat="theme_park" data-idx="7" onclick="toggleSpot(this, 7)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#7B68EE18">🏰</div>
         <div class="spot-info">
@@ -443,7 +419,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail8">
+      <div class="spot-detail" style="display:none" id="spotDetail7">
         <div class="spot-notes">도쿄 디즈니 리조트의 씨 파크. Fantasy Springs 에리어 2024.06 오픈.</div>
         <div class="spot-detail-row"><span class="icon">📍</span> 1-13 Maihama, Urayasu, Chiba 279-8511</div>
         <div class="spot-detail-row"><span class="icon">🕐</span> {'typical': '09:00-21:00', 'note': '일자별 상이, 공식앱 확인 필수'}</div>
@@ -456,7 +432,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="9" onclick="toggleSpot(this, 9)">
+    <div class="spot-card" data-cat="attraction" data-idx="8" onclick="toggleSpot(this, 8)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -469,7 +445,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail9">
+      <div class="spot-detail" style="display:none" id="spotDetail8">
         <div class="spot-notes">Premier Access 강력 권장. 스탠바이 시 100분+. 2025.04부터 스탠바이 패스 없이 자유 입장 가능.</div>
         
         
@@ -482,7 +458,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="10" onclick="toggleSpot(this, 10)">
+    <div class="spot-card" data-cat="attraction" data-idx="9" onclick="toggleSpot(this, 9)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -495,7 +471,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail10">
+      <div class="spot-detail" style="display:none" id="spotDetail9">
         <div class="spot-notes">Frozen Journey 스탠바이 대기 중 Premier Access 시간 겹치지 않게 조율.</div>
         
         
@@ -508,7 +484,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="11" onclick="toggleSpot(this, 11)">
+    <div class="spot-card" data-cat="attraction" data-idx="10" onclick="toggleSpot(this, 10)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -521,7 +497,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail11">
+      <div class="spot-detail" style="display:none" id="spotDetail10">
         <div class="spot-notes">비교적 대기 짧음. Frozen 후 연속 방문 가능.</div>
         
         
@@ -534,7 +510,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="attraction" data-idx="12" onclick="toggleSpot(this, 12)">
+    <div class="spot-card" data-cat="attraction" data-idx="11" onclick="toggleSpot(this, 11)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#2ECC7118">⛩️</div>
         <div class="spot-info">
@@ -547,7 +523,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
       </div>
-      <div class="spot-detail" style="display:none" id="spotDetail12">
+      <div class="spot-detail" style="display:none" id="spotDetail11">
         <div class="spot-notes">디즈니씨 대표 어트랙션. 오후 대기줄 길어지므로 오전 추천.</div>
         
         
@@ -555,6 +531,500 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
         
         <div class="spot-actions">
           <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B8%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%B9" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="shopping" data-idx="12" onclick="toggleSpot(this, 12)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#FF69B418">🛍</div>
+        <div class="spot-info">
+          <div class="spot-name">Cat Street (캣스트릿)</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#FF69B418;color:#FF69B4">shopping</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail12">
+        <div class="spot-notes">타케시타도리와 달리 좀 더 세련된 브랜드+빈티지숍+카페가 모인 거리. 시부야 방향으로 걸으면 자연스럽게 연결.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Cat%20Street%20%28%EC%BA%A3%EC%8A%A4%ED%8A%B8%EB%A6%BF%29" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="shopping" data-idx="13" onclick="toggleSpot(this, 13)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#FF69B418">🛍</div>
+        <div class="spot-info">
+          <div class="spot-name">Godzilla Store Tokyo</div>
+          <div class="spot-name-en">ゴジラ・ストア Tokyo</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#FF69B418;color:#FF69B4">shopping</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail13">
+        <div class="spot-notes">2025.04 오픈. 고질라 피규어, 굿즈. 애니/특촬 팬이라면.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B4%E3%82%B8%E3%83%A9%E3%83%BB%E3%82%B9%E3%83%88%E3%82%A2%20Tokyo" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="14" onclick="toggleSpot(this, 14)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">人形町今半 이크스피아리점</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail14">
+        <div class="spot-notes">1895년 창업 스키야키 명가. 구로게 와규 사용. 디너 예산 약 ¥5,000-8,000/인.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%BA%E5%BD%A2%E7%94%BA%E4%BB%8A%E5%8D%8A%20%EC%9D%B4%ED%81%AC%EC%8A%A4%ED%94%BC%EC%95%84%EB%A6%AC%EC%A0%90" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="cafe" data-idx="15" onclick="toggleSpot(this, 15)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#4A90D918">☕</div>
+        <div class="spot-info">
+          <div class="spot-name">MUUN seoul (문서울)</div>
+          <div class="spot-name-en">ムーンソウル</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#4A90D918;color:#4A90D9">cafe</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail15">
+        <div class="spot-notes">산딸기 우유(¥850), 뚱카롱. 한국풍 인테리어. SNS 인기.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%83%A0%E3%83%BC%E3%83%B3%E3%82%BD%E3%82%A6%E3%83%AB" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="cafe" data-idx="16" onclick="toggleSpot(this, 16)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#4A90D918">☕</div>
+        <div class="spot-info">
+          <div class="spot-name">Café no.</div>
+          <div class="spot-name-en">カフェナンバー</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#4A90D918;color:#4A90D9">cafe</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail16">
+        <div class="spot-notes">버블티, 뚱카롱(¥350). '여자들의 에너지 충전소' 컨셉.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%95%E3%82%A7%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="cafe" data-idx="17" onclick="toggleSpot(this, 17)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#4A90D918">☕</div>
+        <div class="spot-info">
+          <div class="spot-name">Rui Cafe (루이 카페)</div>
+          <div class="spot-name-en">ルイカフェ</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#4A90D918;color:#4A90D9">cafe</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail17">
+        <div class="spot-notes">얼그레이 프렌치 토스트(¥1,320). 1F 카페 + 2F 주얼리숍.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%82%A4%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="18" onclick="toggleSpot(this, 18)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">하라주쿠 교자루 (餃子楼)</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail18">
+        <div class="spot-notes">교자 전문점. 쇼핑 중 가벼운 점심으로 적합.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%ED%95%98%EB%9D%BC%EC%A3%BC%EC%BF%A0%20%EA%B5%90%EC%9E%90%EB%A3%A8%20%28%E9%A4%83%E5%AD%90%E6%A5%BC%29" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="19" onclick="toggleSpot(this, 19)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">시부야 이치란 라멘</div>
+          <div class="spot-name-en">一蘭 渋谷店</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail19">
+        <div class="spot-notes">1인석 톤코츠 라멘. 빠른 식사에 적합. 하라주쿠→시부야 이동 중 점심.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%98%AD%20%E6%B8%8B%E8%B0%B7%E5%BA%97" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="20" onclick="toggleSpot(this, 20)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">Grandma Sara's Kitchen</div>
+          <div class="spot-name-en">グランマ・サラのキッチン</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail20">
+        <div class="spot-notes">오므라이스, 햄버그 스테이크. 따뜻한 가정식 느낌.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%9E%E3%83%BB%E3%82%B5%E3%83%A9%E3%81%AE%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="21" onclick="toggleSpot(this, 21)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">Sweetheart Cafe</div>
+          <div class="spot-name-en">スウィートハート・カフェ</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail21">
+        <div class="spot-notes">미키 빵, 시즌 한정 빵. 아침 또는 간식으로.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%88%E3%83%8F%E3%83%BC%E3%83%88%E3%83%BB%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="22" onclick="toggleSpot(this, 22)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">The Diamond Horseshoe</div>
+          <div class="spot-name-en">ザ・ダイヤモンドホースシュー</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail22">
+        <div class="spot-notes">쇼 보면서 식사. 예약 필수(앱). 특별한 경험.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B6%E3%83%BB%E3%83%80%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%89%E3%83%9B%E3%83%BC%E3%82%B9%E3%82%B7%E3%83%A5%E3%83%BC" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="snack_spot" data-idx="23" onclick="toggleSpot(this, 23)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#6C5CE718">📍</div>
+        <div class="spot-info">
+          <div class="spot-name">Cleo's (크레오스)</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">snack_spot</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail23">
+        
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Cleo%27s%20%28%ED%81%AC%EB%A0%88%EC%98%A4%EC%8A%A4%29" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="snack_spot" data-idx="24" onclick="toggleSpot(this, 24)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#6C5CE718">📍</div>
+        <div class="spot-info">
+          <div class="spot-name">The Gazebo (더 가제보)</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">snack_spot</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail24">
+        
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=The%20Gazebo%20%28%EB%8D%94%20%EA%B0%80%EC%A0%9C%EB%B3%B4%29" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="25" onclick="toggleSpot(this, 25)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">Teddy Roosevelt Lounge</div>
+          <div class="spot-name-en">テディ・ルーズヴェルト・ラウンジ</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail25">
+        <div class="spot-notes">칵테일, 맥주, 논알콜 음료. 선상 라운지 분위기. 야경 보며 휴식.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%83%86%E3%83%87%E3%82%A3%E3%83%BB%E3%83%AB%E3%83%BC%E3%82%BA%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%88%E3%83%BB%E3%83%A9%E3%82%A6%E3%83%B3%E3%82%B8" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="26" onclick="toggleSpot(this, 26)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">Cape Cod Cook-Off</div>
+          <div class="spot-name-en">ケープコッド・クックオフ</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail26">
+        <div class="spot-notes">햄버거 세트. 더피 앤 프렌즈 만날 수 있는 에리어.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B1%E3%83%BC%E3%83%97%E3%82%B3%E3%83%83%E3%83%89%E3%83%BB%E3%82%AF%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="restaurant" data-idx="27" onclick="toggleSpot(this, 27)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#E8454518">🍽</div>
+        <div class="spot-info">
+          <div class="spot-name">Zambini Brothers' Ristorante</div>
+          <div class="spot-name-en">ザンビーニ・ブラザーズ・リストランテ</div>
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#E8454518;color:#E84545">restaurant</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail27">
+        <div class="spot-notes">피자, 파스타. 2층 테라스에서 항구 뷰. 예약 불필요.</div>
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B6%E3%83%B3%E3%83%93%E3%83%BC%E3%83%8B%E3%83%BB%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%AA%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="snack_spot" data-idx="28" onclick="toggleSpot(this, 28)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#6C5CE718">📍</div>
+        <div class="spot-info">
+          <div class="spot-name">Nautilus Galley</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">snack_spot</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail28">
+        
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Nautilus%20Galley" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="snack_spot" data-idx="29" onclick="toggleSpot(this, 29)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#6C5CE718">📍</div>
+        <div class="spot-info">
+          <div class="spot-name">Sultan's Oasis</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">snack_spot</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail29">
+        
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Sultan%27s%20Oasis" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="spot-card" data-cat="snack_spot" data-idx="30" onclick="toggleSpot(this, 30)">
+      <div class="spot-card-header">
+        <div class="spot-icon" style="background:#6C5CE718">📍</div>
+        <div class="spot-info">
+          <div class="spot-name">Refrescos</div>
+          
+          <div class="spot-tags">
+            <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">snack_spot</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="spot-detail" style="display:none" id="spotDetail30">
+        
+        
+        
+        
+        
+        <div class="spot-actions">
+          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Refrescos" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
           
         </div>
       </div>
@@ -578,14 +1048,14 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   <div class="time-block">
     <div class="time-marker">
       <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">12:00</div>
+      <div class="time-label" style="color:#E84545">09:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">✈ KE2101 GMP → HND</div>
       
-      <div class="description">출발 항공편</div>
+      <div class="description">KE2101 김포(GMP)→하네다(HND) 2시간 20분. 입국심사+수하물 약 30~50분 → 공항 밖 12:00~12:10</div>
       <div class="detail-tags">
-        
+        <span class="dtag dtag-time">⏱ 140분</span>
         
         
       </div>
@@ -601,7 +1071,47 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="time-label" style="color:#E84545">12:00</div>
     </div>
     <div class="time-content">
-      <div class="place-name">하라주쿠 타케시타도리</div>
+      <div class="place-name">🧳 짐 보관 + 하네다 → 하라주쿠 이동</div>
+      
+      <div class="description">하네다 도착 → 코인 로커(하네다역 or 하라주쿠역, ¥600~800/개) → 쇼핑 → 마이하마역 Welcome Center(16:00 이전이면 무료 호텔 배송) → 호텔 체크인 | 전철 (京急 + JR) Haneda → Shinagawa → (JR Yamanote) → Harajuku ~45분 ¥610</div>
+      <div class="detail-tags">
+        <span class="dtag dtag-time">⏱ 45분</span>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="time-block">
+    <div class="time-marker">
+      <div class="time-dot" style="background:#E84545"></div>
+      <div class="time-label" style="color:#E84545">13:00</div>
+    </div>
+    <div class="time-content">
+      <div class="place-name">🍽 점심: 하라주쿠 교자루 (餃子楼)</div>
+      
+      <div class="description">하라주쿠역 도보 5분 | ¥1000/인 | 교자 전문점. 쇼핑 중 가벼운 점심으로 적합.</div>
+      <div class="detail-tags">
+        <span class="dtag dtag-time">⏱ 30분</span>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="time-block">
+    <div class="time-marker">
+      <div class="time-dot" style="background:#E84545"></div>
+      <div class="time-label" style="color:#E84545">13:45</div>
+    </div>
+    <div class="time-content">
+      <div class="place-name">🛍 하라주쿠 타케시타도리</div>
       <div class="place-local">竹下通り</div>
       <div class="description">스트리트 패션 성지. 캡슐토이 전문점(CAPSULE LAB, #C-pla+), 빈티지숍, 편집숍 밀집. 고2 딸 취향 최적.</div>
       <div class="detail-tags">
@@ -620,10 +1130,10 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   <div class="time-block">
     <div class="time-marker">
       <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">13:45</div>
+      <div class="time-label" style="color:#E84545">15:30</div>
     </div>
     <div class="time-content">
-      <div class="place-name">시부야 파르코 6F (CYBERSPACE SHIBUYA)</div>
+      <div class="place-name">🛍 시부야 파르코 6F (CYBERSPACE SHIBUYA)</div>
       <div class="place-local">渋谷PARCO 6F</div>
       <div class="description">애니메/게임 콘텐츠 성지. Nintendo TOKYO, Pokemon Center 등 캐릭터숍 밀집.</div>
       <div class="detail-tags">
@@ -642,19 +1152,17 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   <div class="time-block">
     <div class="time-marker">
       <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">15:00</div>
+      <div class="time-label" style="color:#E84545">16:45</div>
     </div>
     <div class="time-content">
-      <div class="place-name">애니메이트 이케부쿠로 본점</div>
-      <div class="place-local">アニメイト池袋本店</div>
-      <div class="description">세계 최대 애니메이션 전문점 (기네스 인증). 이케부쿠로역 동쪽출구 도보 5분. 단, 5/23 동선상 하라주쿠/시부야에서 이케부쿠로는 추가 30분 소요로 시간 배분 주의.</div>
+      <div class="place-name">🚃 시부야 → 마이하마 (호텔)</div>
+      
+      <div class="description">전철 (JR) Shibuya → (Saikyo/Rinkai) → Shin-Kiba → (JR Keiyo) → Maihama ~45분 ¥510</div>
       <div class="detail-tags">
-        <span class="dtag dtag-time">⏱ 60분</span>
-        <span class="dtag dtag-transport">🚶 전철 28분 (7.7km)</span>
+        <span class="dtag dtag-time">⏱ 45분</span>
+        
         
       </div>
-      
-      <a class="place-meta-link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">📍 Google Maps에서 보기 →</a>
       
     </div>
   </div>
@@ -664,15 +1172,35 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   <div class="time-block">
     <div class="time-marker">
       <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">16:15</div>
+      <div class="time-label" style="color:#E84545">17:45</div>
     </div>
     <div class="time-content">
-      <div class="place-name">저녁: 焼肉トラジ 이크스피아리점</div>
+      <div class="place-name">🏨 호텔 체크인</div>
+      
+      <div class="description">Tokyo Disney Hotel | 체크인 16:00</div>
+      <div class="detail-tags">
+        <span class="dtag dtag-time">⏱ 30분</span>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="time-block">
+    <div class="time-marker">
+      <div class="time-dot" style="background:#E84545"></div>
+      <div class="time-label" style="color:#E84545">18:30</div>
+    </div>
+    <div class="time-content">
+      <div class="place-name">🍽 저녁: 焼肉トラジ 이크스피아리점</div>
       <div class="place-local">焼肉トラジ イクスピアリ店</div>
       <div class="description">야키니쿠 전문점. 호텔 근처 이크스피아리 내 위치. 디너 예산 약 ¥4,000-6,000/인.</div>
       <div class="detail-tags">
         <span class="dtag dtag-time">⏱ 75분</span>
-        <span class="dtag dtag-transport">🚶 전철 56분 (18.5km)</span>
+        <span class="dtag dtag-transport">🚶 전철 52분 (17.1km)</span>
         
       </div>
       
@@ -689,6 +1217,35 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="nearby-section">
     <div class="nearby-title">📌 더 둘러보기</div>
+    
+    
+    
+    
+    <div class="nearby-item">
+      <div class="nearby-name">Cat Street (캣스트릿)</div>
+      <div class="nearby-desc">타케시타도리와 달리 좀 더 세련된 브랜드+빈티지숍+카페가 모인 거리. 시부야 방향으로 걸으면 자연스럽게 연결.</div>
+    </div>
+    
+    
+    
+    <div class="nearby-item">
+      <div class="nearby-name">Godzilla Store Tokyo</div>
+      <div class="nearby-desc">2025.04 오픈. 고질라 피규어, 굿즈. 애니/특촬 팬이라면.</div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="nearby-item">
+      <div class="nearby-name">人形町今半 이크스피아리점</div>
+      <div class="nearby-desc">1895년 창업 스키야키 명가. 구로게 와규 사용. 디너 예산 약 ¥5,000-8,000/인.</div>
+    </div>
+    
+    
+    
     
     
     
@@ -712,24 +1269,6 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
     <div class="nearby-item">
       <div class="nearby-name">Rui Cafe (루이 카페)</div>
       <div class="nearby-desc">얼그레이 프렌치 토스트(¥1,320). 1F 카페 + 2F 주얼리숍.</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    <div class="nearby-item">
-      <div class="nearby-name">Cat Street (캣스트릿)</div>
-      <div class="nearby-desc">타케시타도리와 달리 좀 더 세련된 브랜드+빈티지숍+카페가 모인 거리. 시부야 방향으로 걸으면 자연스럽게 연결.</div>
-    </div>
-    
-    
-    
-    <div class="nearby-item">
-      <div class="nearby-name">Godzilla Store Tokyo</div>
-      <div class="nearby-desc">2025.04 오픈. 고질라 피규어, 굿즈. 애니/특촬 팬이라면.</div>
     </div>
     
     
@@ -1589,7 +2128,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="footer-section">
     <div class="disclaimer">⚠️ 이 여행 일정은 AI가 생성한 것입니다. 가격, 영업시간 등은 변동될 수 있으니 방문 전 재확인을 권장합니다.</div>
-    <div class="footer-text">Travel Planner Agent v2 · Generated 2026-03-20 17:06</div>
+    <div class="footer-text">Travel Planner Agent v2 · Generated 2026-03-20 17:27</div>
   </div>
 </div></div>
 
@@ -1642,7 +2181,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   // Places map
   var mapEl=document.getElementById('placesMap');
   if(mapEl&&typeof L!=='undefined'){
-    var mapData=[{"lat": 35.6329, "lng": 139.8804, "name": "Tokyo Disney Hotel", "nameLocal": "東京ディズニーホテル", "emoji": "🏨", "color": "#6C5CE7", "cat": "accommodation", "isHotel": true}, {"lat": 35.6702, "lng": 139.7026, "name": "하라주쿠 타케시타도리", "nameLocal": "竹下通り", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6618, "lng": 139.6982, "name": "시부야 파르코 6F (CYBERSPACE SHIBUYA)", "nameLocal": "渋谷PARCO 6F", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.7295, "lng": 139.717, "name": "애니메이트 이케부쿠로 본점", "nameLocal": "アニメイト池袋本店", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6321, "lng": 139.8836, "name": "焼肉トラジ 이크스피아리점", "nameLocal": "焼肉トラジ イクスピアリ店", "emoji": "🍽", "color": "#E84545", "cat": "restaurant", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "도쿄 디즈니랜드", "nameLocal": "東京ディズニーランド", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.6267, "lng": 139.885, "name": "도쿄 디즈니씨", "nameLocal": "東京ディズニーシー", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}];
+    var mapData=[{"lat": 35.6329, "lng": 139.8804, "name": "Tokyo Disney Hotel", "nameLocal": "東京ディズニーホテル", "emoji": "🏨", "color": "#6C5CE7", "cat": "accommodation", "isHotel": true}, {"lat": 35.6702, "lng": 139.7026, "name": "하라주쿠 타케시타도리", "nameLocal": "竹下通り", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6618, "lng": 139.6982, "name": "시부야 파르코 6F (CYBERSPACE SHIBUYA)", "nameLocal": "渋谷PARCO 6F", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6321, "lng": 139.8836, "name": "焼肉トラジ 이크스피아리점", "nameLocal": "焼肉トラジ イクスピアリ店", "emoji": "🍽", "color": "#E84545", "cat": "restaurant", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "도쿄 디즈니랜드", "nameLocal": "東京ディズニーランド", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.6267, "lng": 139.885, "name": "도쿄 디즈니씨", "nameLocal": "東京ディズニーシー", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}];
     var pmap=L.map('placesMap',{zoomControl:true,attributionControl:false}).setView([35.6329,139.8804],13);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(pmap);
     window._placesMap=pmap;window._placeMarkers=[];
