@@ -158,7 +158,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
     <div class="hero-dates">2025-05-23 ~ 2025-05-26</div>
     <div class="subtitle">엄마 + 고2 딸, 모녀 여행 · 고2 딸이 즐거운 여행 — 딸 취향 우선; 엄마도 편한 여행 — 무리한 도보 이동 최소화</div>
     <div class="meta-tags">
-      <span class="meta-tag">✈️ GMP → HND (KE2101) 2시간 20분 09:00→11:20</span><span class="meta-tag">👥 엄마 + 고2 딸, 모녀 여행</span><span class="meta-tag">🎯 일본 스트리트 패션·디즈니·애니메이션</span><span class="meta-tag">🌡 15.6~24.8°C</span>
+      <span class="meta-tag">✈️ GMP → HND (KE2101) 09:00→11:20</span><span class="meta-tag">✈️ HND → ICN (KE752) 02:00→04:50</span><span class="meta-tag">👥 엄마 + 고2 딸, 모녀 여행</span><span class="meta-tag">🎯 일본 스트리트 패션·디즈니·애니메이션</span><span class="meta-tag">🌡 15.6~24.8°C</span>
     </div>
   </div></div>
 
@@ -169,6 +169,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="info-card"><div class="label">날씨</div><div class="value">24.8°C / 15.6°C</div></div>
       <div class="info-card"><div class="label">강수</div><div class="value">보통 (장마 전, 간헐적 소나기 가능)</div></div>
       <div class="info-card"><div class="label">참고</div><div class="value">5월 말은 쾌적한 시기. 우비/접이식 우산 지참 권장.</div></div>
+      <div class="info-card"><div class="label">환율</div><div class="value">100엔 = 약 940원 (2026년 3월 기준)</div></div>
     </div>
   </div>
   
@@ -203,13 +204,13 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   
   <div class="filter-tabs" id="placesFilter">
-    <button class="filter-tab active" data-filter="all" onclick="filterPlaces('all')">📍 전체 <span class="filter-count">(46)</span></button>
+    <button class="filter-tab active" data-filter="all" onclick="filterPlaces('all')">📍 전체 <span class="filter-count">(44)</span></button>
     
     <button class="filter-tab" data-filter="accommodation" onclick="filterPlaces('accommodation')">🏨 숙소 <span class="filter-count">(1)</span></button>
     
     <button class="filter-tab" data-filter="restaurant" onclick="filterPlaces('restaurant')">🍽 맛집 <span class="filter-count">(10)</span></button>
     
-    <button class="filter-tab" data-filter="cafe" onclick="filterPlaces('cafe')">☕ 카페 <span class="filter-count">(3)</span></button>
+    <button class="filter-tab" data-filter="cafe" onclick="filterPlaces('cafe')">☕ 카페 <span class="filter-count">(1)</span></button>
     
     <button class="filter-tab" data-filter="attraction" onclick="filterPlaces('attraction')">⛩️ 관광 <span class="filter-count">(12)</span></button>
     
@@ -1031,57 +1032,6 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="cafe" data-idx="31" onclick="toggleSpot(this, 31)">
-      <div class="spot-card-header">
-        <div class="spot-icon" style="background:#4A90D918">☕</div>
-        <div class="spot-info">
-          <div class="spot-name">Café no.</div>
-          <div class="spot-name-en">カフェナンバー</div>
-          <div class="spot-tags">
-            <span class="spot-type" style="background:#4A90D918;color:#4A90D9">cafe</span>
-            
-            
-          </div>
-        </div>
-      </div>
-      <div class="spot-detail" style="display:none" id="spotDetail31">
-        <div class="spot-notes">버블티, 뚱카롱(¥350). '여자들의 에너지 충전소' 컨셉.</div>
-        
-        
-        
-        
-        <div class="spot-actions">
-          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%95%E3%82%A7%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="spot-card" data-cat="cafe" data-idx="32" onclick="toggleSpot(this, 32)">
-      <div class="spot-card-header">
-        <div class="spot-icon" style="background:#4A90D918">☕</div>
-        <div class="spot-info">
-          <div class="spot-name">Rui Cafe (루이 카페)</div>
-          <div class="spot-name-en">ルイカフェ</div>
-          <div class="spot-tags">
-            <span class="spot-type" style="background:#4A90D918;color:#4A90D9">cafe</span>
-            
-            
-          </div>
-        </div>
-      </div>
-      <div class="spot-detail" style="display:none" id="spotDetail32">
-        <div class="spot-notes">얼그레이 프렌치 토스트(¥1,320). 1F 카페 + 2F 주얼리숍.</div>
-        
-        
-        
-        
-        <div class="spot-actions">
-          <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%82%A4%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
-          
-        </div>
-      </div>
-    </div>
     
     <div class="spot-card" data-cat="restaurant" data-idx="33" onclick="toggleSpot(this, 33)">
       <div class="spot-card-header">
@@ -1631,81 +1581,61 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="nearby-section">
     <div class="nearby-title">📌 더 둘러보기</div>
-    
-    
-    
-    
+
     <div class="nearby-item">
       <div class="nearby-name">Cat Street (캣스트릿)</div>
       <div class="nearby-desc">타케시타도리와 달리 좀 더 세련된 브랜드+빈티지숍+카페가 모인 거리. 시부야 방향으로 걸으면 자연스럽게 연결.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Cat+Street+Harajuku+Tokyo" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6693,139.7075&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
+
     <div class="nearby-item">
-      <div class="nearby-name">Godzilla Store Tokyo</div>
-      <div class="nearby-desc">2025.04 오픈. 고질라 피규어, 굿즈. 애니/특촬 팬이라면.</div>
+      <div class="nearby-name">Godzilla Store (시부야 PARCO 6F)</div>
+      <div class="nearby-desc">2025.04 오픈. 고질라 피규어, 굿즈. 시부야 파르코 6F 내 위치로 CYBERSPACE SHIBUYA와 같은 층.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Godzilla+Store+Shibuya+PARCO" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6622,139.6983&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    <div class="nearby-item">
-      <div class="nearby-name">人形町今半 이크스피아리점</div>
-      <div class="nearby-desc">1895년 창업 스키야키 명가. 구로게 와규 사용. 디너 예산 약 ¥5,000-8,000/인.</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     <div class="nearby-item">
       <div class="nearby-name">MUUN seoul (문서울)</div>
-      <div class="nearby-desc">산딸기 우유(¥850), 뚱카롱. 한국풍 인테리어. SNS 인기.</div>
+      <div class="nearby-desc">산딸기 우유(¥850), 뚱카롱. 한국풍 인테리어. SNS 인기. 현금만 가능.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=MUUN+Seoul+Harajuku" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6700,139.7064&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
+
     <div class="nearby-item">
-      <div class="nearby-name">Café no.</div>
-      <div class="nearby-desc">버블티, 뚱카롱(¥350). '여자들의 에너지 충전소' 컨셉.</div>
+      <div class="nearby-name">人形町今半 이크스피아리점</div>
+      <div class="nearby-desc">1895년 창업 스키야키 명가. 구로게 와규 사용. 디너 예산 약 ¥5,000-8,000/인. 마이하마역 도보 3분.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%BA%E5%BD%A2%E7%94%BA%E4%BB%8A%E5%8D%8A+%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%94%E3%82%A2%E3%83%AA" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6325,139.8856&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
-    <div class="nearby-item">
-      <div class="nearby-name">Rui Cafe (루이 카페)</div>
-      <div class="nearby-desc">얼그레이 프렌치 토스트(¥1,320). 1F 카페 + 2F 주얼리숍.</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
+
     <div class="nearby-item">
       <div class="nearby-name">하라주쿠 교자루 (餃子楼)</div>
-      <div class="nearby-desc">교자 전문점. 쇼핑 중 가벼운 점심으로 적합.</div>
+      <div class="nearby-desc">교자 전문점. 교자 6개 ¥290. 쇼핑 중 가벼운 점심으로 적합. 오모테산도 에리어.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://maps.google.com/?cid=10029775272822189018" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6686,139.7049&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
+
     <div class="nearby-item">
       <div class="nearby-name">시부야 이치란 라멘</div>
-      <div class="nearby-desc">1인석 톤코츠 라멘. 빠른 식사에 적합. 하라주쿠→시부야 이동 중 점심.</div>
+      <div class="nearby-desc">1인석 톤코츠 라멘. 24시간 영업. 시부야역 도보 3~5분. 빠른 식사에 적합.</div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%98%AD+%E6%B8%8B%E8%B0%B7" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+        <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6611,139.7011&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+      </div>
     </div>
-    
-    
-    
-    
+
   </div>
   
 </div></div>
@@ -1735,7 +1665,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       
       <div style="margin-bottom:4px"><span style="font-weight:700;color:#4A90D9">lunch</span> 11:30 La Taverne de Gaston 또는 Queen of Hearts</div>
       
-      <div style="margin-bottom:4px"><span style="font-weight:700;color:#4A90D9">afternoon</span> Monsters Inc → Big Thunder Mountain → Westernland 석양 산책 → Pirates → 17:50 Big Thunder Mountain 석양 라이딩 (일몰 18:46)</div>
+      <div style="margin-bottom:4px"><span style="font-weight:700;color:#4A90D9">afternoon</span> Monsters Inc → Pirates → Space Mountain → 저녁 식사 → 17:50 Big Thunder Mountain 석양 라이딩 (일몰 18:46)</div>
 
       <div style="margin-bottom:4px"><span style="font-weight:700;color:#4A90D9">dinner</span> 17:00-18:00 파크 내 식사</div>
 
@@ -2158,25 +2088,6 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   
   
-  <div class="time-block">
-    <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">12:25</div>
-    </div>
-    <div class="time-content">
-      <div class="place-name">🎢 Big Thunder Mountain</div>
-      <div class="place-local">ビッグサンダー・マウンテン</div>
-      <div class="description">Westernland | 대기 ~60분 | 야간 라이드 추천 (조명이 아름다움). 엄마도 즐길 수 있는 적당한 스릴.</div>
-      <div class="detail-tags">
-        <span class="dtag dtag-time">⏱ 50분</span>
-        
-        
-      </div>
-      
-      <a class="place-meta-link" href="https://www.google.com/maps/search/?api=1&query=%E3%83%93%E3%83%83%E3%82%B0%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%83%BB%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%86%E3%83%B3" target="_blank" rel="noopener">📍 지도 보기 →</a>
-      
-    </div>
-  </div>
   
   
   
@@ -2450,7 +2361,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       
       <div style="margin-bottom:4px"><span style="font-weight:700;color:#2ECC71">evening</span> 18:00-19:30 나머지 어트랙션 + American Waterfront 야경 산책</div>
       
-      <div style="margin-bottom:4px"><span style="font-weight:700;color:#2ECC71">departure</span> 20:00-21:00 파크 퇴장 → 이크스피아리(선택) → 리무진 버스 or 택시 → 하네다</div>
+      <div style="margin-bottom:4px"><span style="font-weight:700;color:#2ECC71">departure</span> 20:00 TDS 퇴장 → 모노레일 TDL역 (9분) → 호텔 짐 회수 → 20:25 TDL 버스터미널 이스트 8번 → 리무진 → 21:10 하네다</div>
       
     </div>
   </div>
@@ -2930,34 +2841,83 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
     <div class="time-content">
       <div class="place-name">🚶 파크 퇴장</div>
       
-      <div class="description">⚠ KE752 역산 — 20:00까지 파크 퇴장 필수</div>
+      <div class="description">⚠ KE752 역산 — 20:00까지 파크 퇴장 필수.</div>
       <div class="detail-tags">
-        
-        
-        
       </div>
-      
     </div>
   </div>
-  
-  
-  
+
+
   <div class="time-block">
     <div class="time-marker">
       <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">20:30</div>
+      <div class="time-label" style="color:#2ECC71">20:00</div>
+    </div>
+    <div class="time-content">
+      <div class="place-name">🚝 모노레일 TDS역 → TDL역</div>
+      <div class="description">디즈니리조트라인 TDS역→TDL역 (약 9분). 파크 퇴장 후 바로 탑승. 디즈니 호텔 숙박객은 무료 (체크인 시 Free Ticket 수령).</div>
+      <div class="detail-tags">
+        <span class="dtag dtag-time">⏱ 9분</span>
+        <span class="dtag dtag-cost">호텔 숙박객 무료</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="time-block">
+    <div class="time-marker">
+      <div class="time-dot" style="background:#2ECC71"></div>
+      <div class="time-label" style="color:#2ECC71">20:10</div>
+    </div>
+    <div class="time-content">
+      <div class="place-name">🧳 호텔 짐 회수</div>
+      <div class="place-local">Tokyo Disney Hotel</div>
+      <div class="description">TDL역에서 호텔까지 도보 약 3분. 체크아웃 시 프론트에 보관 요청한 짐 수령 (무료). 짐 찾고 TDL 버스터미널 이스트로 도보 3분.</div>
+      <div class="detail-tags">
+        <span class="dtag dtag-time">⏱ 10분</span>
+        <span class="dtag dtag-tip">💡 체크아웃 시 "짐 보관 부탁합니다" (荷物を預かってください)</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="time-block">
+    <div class="time-marker">
+      <div class="time-dot" style="background:#2ECC71"></div>
+      <div class="time-label" style="color:#2ECC71">20:25</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚌 리무진 버스 → 하네다공항</div>
       <div class="place-local">羽田空港 第3ターミナル</div>
-      <div class="description">Disney Resort → Haneda Airport | 리무진버스 ~30~40분 | ¥1,000/인 (소인 ¥500). 10~20분 간격 운행. 대안: 전철 (마이하마→신키바→모노레일/케이큐→하네다, ~50분, ¥800대). 리무진 마지막 편 ~19:50 — 그 이후는 전철로. KE752 새벽 02:00 출발 → 하네다 자정까지 도착 권장.</div>
+      <div class="description">Disney Resort → Haneda Airport | 케이큐버스 ~30~45분 | ¥1,300/인 (소인 ¥650), 하차 시 후불 결제. 대안: 전철 (마이하마→신키바→모노레일/케이큐→하네다, ~50분, ¥800대). 저녁 이후 버스 미운행 시 전철 이용. KE752 새벽 02:00 출발 → 하네다 자정까지 도착 권장.</div>
       <div class="detail-tags">
-        <span class="dtag dtag-time">⏱ 50분</span>
-        <span class="dtag dtag-transport">🚶 전철 43분 (13.8km)</span>
-        
+        <span class="dtag dtag-time">⏱ 30~45분</span>
+        <span class="dtag dtag-cost">¥1,300 (후불)</span>
       </div>
-      
-      <a class="place-meta-link" href="https://maps.google.com/?cid=8215175827991883231&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">📍 지도 보기 →</a>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.7">
+        <div style="font-weight:600;margin-bottom:6px">버스터미널 위치:</div>
+        <div style="margin-bottom:8px">
+          <span style="font-weight:600;color:var(--green)">추천: TDL 버스터미널 이스트 8번</span> — 호텔 짐 회수 후 도보 3분
+          <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
+            <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland+Bus+Terminal+East" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+            <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6340,139.8795&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+          </div>
+        </div>
+        <div style="margin-bottom:8px">
+          <span style="font-weight:600">대안: TDS 버스터미널 노스 4번</span> — 짐 없이 TDS에서 바로 탈 때
+          <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
+            <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea+Bus+Terminal+North" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+            <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6280,139.8870&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+          </div>
+        </div>
+        <div>
+          <span style="font-weight:600">디즈니랜드 호텔 앞</span> — 일부 노선 호텔 직접 정차
+          <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
+            <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland+Hotel" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
+            <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6355,139.8785&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
