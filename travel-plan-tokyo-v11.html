@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>도쿄 4일 여행 일정</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -69,6 +69,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 .spot-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .spot-type{font-size:10.5px;padding:2px 8px;border-radius:20px;font-weight:600}
 .spot-rating{font-size:11.5px;color:var(--orange)}
+.spot-rating-text{font-size:11.5px;color:var(--orange);margin-left:2px;font-weight:600}
 .spot-distance{font-size:11px;color:var(--text-tertiary);display:flex;align-items:center;gap:3px}
 .spot-detail{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-secondary);line-height:1.7}
 .spot-detail-row{display:flex;gap:6px;margin-bottom:4px;overflow-wrap:break-word;word-break:break-word}
@@ -88,7 +89,9 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 .time-block{display:flex;gap:16px;padding:16px 0;position:relative}
 .time-marker{width:52px;flex-shrink:0;text-align:center;position:relative;z-index:1}
 .time-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);margin:0 auto 6px}
+.time-dot-day1{background:var(--red)}.time-dot-day2{background:var(--blue)}.time-dot-day3{background:var(--green)}.time-dot-day4{background:var(--orange)}
 .time-label{font-size:10px;font-weight:700;word-break:break-all;line-height:1.3}
+.time-label-day1{color:var(--red)}.time-label-day2{color:var(--blue)}.time-label-day3{color:var(--green)}.time-label-day4{color:var(--orange)}
 .time-content{flex:1;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
 .time-content .place-name{font-size:15px;font-weight:700;margin-bottom:2px;overflow-wrap:break-word}
 .time-content .place-local{font-size:12px;color:var(--text-tertiary);margin-bottom:6px}
@@ -205,18 +208,14 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="filter-tabs" id="placesFilter">
     <button class="filter-tab active" data-filter="all" onclick="filterPlaces('all')">📍 전체 <span class="filter-count">(43)</span></button>
-    
-    <button class="filter-tab" data-filter="accommodation" onclick="filterPlaces('accommodation')">🏨 숙소 <span class="filter-count">(1)</span></button>
-    
-    <button class="filter-tab" data-filter="restaurant" onclick="filterPlaces('restaurant')">🍽 맛집 <span class="filter-count">(10)</span></button>
-    
+    <button class="filter-tab" data-filter="accommodation" onclick="filterPlaces('accommodation')">🏨 숙소 <span class="filter-count">(2)</span></button>
+    <button class="filter-tab" data-filter="restaurant" onclick="filterPlaces('restaurant')">🍽 맛집 <span class="filter-count">(15)</span></button>
     <button class="filter-tab" data-filter="cafe" onclick="filterPlaces('cafe')">☕ 카페 <span class="filter-count">(1)</span></button>
-    
-    <button class="filter-tab" data-filter="attraction" onclick="filterPlaces('attraction')">⛩️ 관광 <span class="filter-count">(12)</span></button>
-    
+    <button class="filter-tab" data-filter="attraction" onclick="filterPlaces('attraction')">⛩️ 관광 <span class="filter-count">(14)</span></button>
     <button class="filter-tab" data-filter="theme_park" onclick="filterPlaces('theme_park')">🏰 테마파크 <span class="filter-count">(2)</span></button>
-    
     <button class="filter-tab" data-filter="shopping" onclick="filterPlaces('shopping')">🛍 쇼핑 <span class="filter-count">(4)</span></button>
+    <button class="filter-tab" data-filter="show" onclick="filterPlaces('show')">🎭 쇼 <span class="filter-count">(1)</span></button>
+    <button class="filter-tab" data-filter="snack_spot" onclick="filterPlaces('snack_spot')">🍡 간식 <span class="filter-count">(4)</span></button>
     
   </div>
 
@@ -230,8 +229,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">🏨</div>
         <div class="spot-info">
-          <div class="spot-name">Tokyo Disney Hotel</div>
-          <div class="spot-name-en">東京ディズニーホテル</div>
+          <div class="spot-name">Tokyo Disneyland Hotel</div>
+          <div class="spot-name-en">東京ディズニーランドホテル</div>
           <div class="spot-tags">
             <span class="spot-type" style="background:#6C5CE718;color:#6C5CE7">accommodation</span>
             <span class="spot-rating">★★★★☆</span><span class="spot-rating-text">4.3</span>
@@ -252,7 +251,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="1" onclick="toggleSpot(this, 1)">
+    <div class="spot-card" data-cat="attraction" data-idx="1" onclick="toggleSpot(this, 1)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -278,7 +277,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="2" onclick="toggleSpot(this, 2)">
+    <div class="spot-card" data-cat="restaurant" data-idx="2" onclick="toggleSpot(this, 2)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -294,7 +293,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail2">
         
         <div class="spot-detail-row"><span class="icon">📍</span> 6-chōme-2-4 Jingūmae, Shibuya, Tokyo 150-0001, Japan</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'sunday': '11:30-21:30', 'monday': '11:30-21:30',...</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 매일 11:30-21:30</div>
         <div class="spot-detail-row"><span class="icon">📞</span> +81 3-3406-4743</div>
         
         <div class="spot-actions">
@@ -356,7 +355,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="5" onclick="toggleSpot(this, 5)">
+    <div class="spot-card" data-cat="attraction" data-idx="5" onclick="toggleSpot(this, 5)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -382,7 +381,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="6" onclick="toggleSpot(this, 6)">
+    <div class="spot-card" data-cat="accommodation" data-idx="6" onclick="toggleSpot(this, 6)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -450,7 +449,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail8">
         <div class="spot-notes">도쿄 디즈니 리조트의 랜드 파크. 미녀와 야수 에리어가 v1 요청 핵심.</div>
         <div class="spot-detail-row"><span class="icon">📍</span> 1-1 Maihama, Urayasu, Chiba 279-8511</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'typical': '09:00-21:00', 'note': '일자별 상이, 공식앱 확인 필수'}</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 보통 09:00-21:00 (일자별 상이, 공식앱 확인 필수)</div>
         
         
         <div class="spot-actions">
@@ -538,7 +537,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="12" onclick="toggleSpot(this, 12)">
+    <div class="spot-card" data-cat="restaurant" data-idx="12" onclick="toggleSpot(this, 12)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -554,7 +553,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail12">
         
         <div class="spot-detail-row"><span class="icon">📍</span> 1-1 Maihama, Urayasu, Chiba 279-0031, Japan</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'sunday': '09:00-20:00', 'monday': '09:00-20:00',...</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 매일 09:00-20:00 (파크 운영시간에 따라 변동)</div>
         <div class="spot-detail-row"><span class="icon">📞</span> +81 570-008-632</div>
         
         <div class="spot-actions">
@@ -668,7 +667,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="17" onclick="toggleSpot(this, 17)">
+    <div class="spot-card" data-cat="restaurant" data-idx="17" onclick="toggleSpot(this, 17)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -684,7 +683,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail17">
         
         <div class="spot-detail-row"><span class="icon">📍</span> Japan, 〒279-0031 Chiba, Urayasu, Maihama, １−１ 東京ディズニーランド ファンタジーランド</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'sunday': '09:00-21:00', 'monday': '09:00-21:00',...</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 매일 09:00-21:00 (파크 운영시간에 따라 변동)</div>
         
         
         <div class="spot-actions">
@@ -710,7 +709,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail18">
         <div class="spot-notes">도쿄 디즈니 리조트의 씨 파크. Fantasy Springs 에리어 2024.06 오픈.</div>
         <div class="spot-detail-row"><span class="icon">📍</span> 1-13 Maihama, Urayasu, Chiba 279-8511</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'typical': '09:00-21:00', 'note': '일자별 상이, 공식앱 확인 필수'}</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 보통 09:00-21:00 (일자별 상이, 공식앱 확인 필수)</div>
         
         
         <div class="spot-actions">
@@ -798,7 +797,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="22" onclick="toggleSpot(this, 22)">
+    <div class="spot-card" data-cat="restaurant" data-idx="22" onclick="toggleSpot(this, 22)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -902,7 +901,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       </div>
     </div>
     
-    <div class="spot-card" data-cat="" data-idx="26" onclick="toggleSpot(this, 26)">
+    <div class="spot-card" data-cat="restaurant" data-idx="26" onclick="toggleSpot(this, 26)">
       <div class="spot-card-header">
         <div class="spot-icon" style="background:#6C5CE718">📍</div>
         <div class="spot-info">
@@ -918,7 +917,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
       <div class="spot-detail" style="display:none" id="spotDetail26">
         
         <div class="spot-detail-row"><span class="icon">📍</span> 1-1 Maihama, Urayasu, Chiba 279-0031, Japan</div>
-        <div class="spot-detail-row"><span class="icon">🕐</span> {'sunday': '11:00-19:30', 'monday': '11:00-19:30',...</div>
+        <div class="spot-detail-row"><span class="icon">🕐</span> 매일 11:00-19:30 (파크 운영시간에 따라 변동)</div>
         
         
         <div class="spot-actions">
@@ -1373,8 +1372,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">09:00</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">09:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">✈ KE2101 GMP → HND</div>
@@ -1393,8 +1392,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">11:20</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">11:20</div>
     </div>
     <div class="time-content">
       <div class="place-name">🧳 하네다공항 도착 + Suica 구매</div>
@@ -1409,8 +1408,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">12:05</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">12:05</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚃 하네다 T3(12:05) → 도쿄역(12:30) [모노레일+JR, 25분]</div>
@@ -1437,8 +1436,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">13:10</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">13:10</div>
     </div>
     <div class="time-content">
       <div class="place-name">🛍 하라주쿠 타케시타도리</div>
@@ -1462,8 +1461,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">14:20</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">14:20</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 점심: 하라주쿠 교자루 (餃子楼)</div>
@@ -1479,8 +1478,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">14:55</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">14:55</div>
     </div>
     <div class="time-content">
       <div class="place-name">🛍 시부야 파르코 6F (CYBERSPACE SHIBUYA)</div>
@@ -1505,8 +1504,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">15:55</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">15:55</div>
     </div>
     <div class="time-content">
       <div class="place-name">🛍 애니메이트 이케부쿠로 본점</div>
@@ -1526,8 +1525,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">16:50</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">16:50</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚃 이케부쿠로(16:50) → 도쿄역(17:15) → 마이하마(17:45)</div>
@@ -1555,13 +1554,13 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">17:50</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">17:50</div>
     </div>
     <div class="time-content">
       <div class="place-name">🏨 호텔 체크인</div>
       <div class="place-local">東京ディズニーランドホテル</div>
-      <div class="description">Tokyo Disney Hotel | 체크인 16:00</div>
+      <div class="description">Tokyo Disneyland Hotel | 체크인 16:00</div>
       <div class="detail-tags">
         <span class="dtag dtag-time">⏱ 20분</span>
         <span class="dtag dtag-transport">마이하마역(17:45) → 호텔(17:50) | 도보 9분</span>
@@ -1581,8 +1580,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#E84545"></div>
-      <div class="time-label" style="color:#E84545">18:15</div>
+      <div class="time-dot time-dot-day1"></div>
+      <div class="time-label time-label-day1">18:15</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 저녁: 焼肉トラジ 이크스피아리점</div>
@@ -2006,8 +2005,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">08:15</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">08:15</div>
     </div>
     <div class="time-content">
       <div class="place-name">🏰 Tokyo Disneyland</div>
@@ -2032,8 +2031,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">08:30</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">08:30</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Enchanted Tale of Beauty and the Beast</div>
@@ -2054,8 +2053,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">09:25</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">09:25</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Pooh's Hunny Hunt</div>
@@ -2076,8 +2075,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">10:20</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">10:20</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Monsters Inc. Ride & Go Seek</div>
@@ -2098,8 +2097,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">11:30</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">11:30</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 점심: La Taverne de Gaston</div>
@@ -2123,8 +2122,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">13:30</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">13:30</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎆 Disney Harmony in Color</div>
@@ -2145,8 +2144,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">14:55</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">14:55</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Pirates of the Caribbean</div>
@@ -2167,8 +2166,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">15:55</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">15:55</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Space Mountain</div>
@@ -2189,8 +2188,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">17:00</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">17:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 저녁: Queen of Hearts Banquet Hall</div>
@@ -2211,8 +2210,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">17:50</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">17:50</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Big Thunder Mountain (석양 라이딩)</div>
@@ -2229,8 +2228,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">19:15</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">19:15</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎆 Tokyo Disneyland Electrical Parade Dreamlights</div>
@@ -2251,8 +2250,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#4A90D9"></div>
-      <div class="time-label" style="color:#4A90D9">20:25</div>
+      <div class="time-dot time-dot-day2"></div>
+      <div class="time-label time-label-day2">20:25</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎆 Sky Full of Colors</div>
@@ -2352,7 +2351,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 <div class="page" data-page="day3"><div class="page-inner">
   <div class="day-hero" style="border-left:4px solid #2ECC71">
     <div class="day-number" style="color:#2ECC71">DAY 3</div>
-    <div class="day-theme">Tokyo DisneySea → 공항</div>
+    <div class="day-theme">Tokyo DisneySea 종일 → 저녁 공항 이동</div>
     <div style="font-size:12.5px;color:var(--text-secondary);background:rgba(249,168,38,0.08);border:1px solid rgba(249,168,38,0.15);border-radius:10px;padding:10px 14px;margin-top:12px">효율적인 어트랙션 동선<br>분위기 즐기기 — 여유있게<br>KE752 새벽 2시 출발 → 역산하여 파크 출발 시간 산정<br>⚠ 시간 제약: 파크 퇴장 20:00 (여유 확보), 체크인 마감 ~23:30-00:00</div>
   </div>
   <div style="background:rgba(249,168,38,0.08);border:1px solid rgba(249,168,38,0.15);border-radius:10px;padding:10px 14px;margin-bottom:16px">
@@ -2660,8 +2659,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">08:45</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">08:45</div>
     </div>
     <div class="time-content">
       <div class="place-name">🏰 Tokyo DisneySea</div>
@@ -2692,8 +2691,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">08:45</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">09:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Anna and Elsa's Frozen Journey</div>
@@ -2714,8 +2713,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">09:40</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">09:40</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Peter Pan's Never Land Adventure</div>
@@ -2736,8 +2735,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">10:35</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">10:35</div>
     </div>
     <div class="time-content">
       <div class="place-name">⭐ Rapunzel's Lantern Festival</div>
@@ -2758,8 +2757,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">12:00</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">12:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 점심: Vulcania Restaurant</div>
@@ -2780,8 +2779,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">12:55</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">12:55</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Journey to the Center of the Earth</div>
@@ -2802,8 +2801,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">13:50</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">13:50</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Soaring: Fantastic Flight</div>
@@ -2824,8 +2823,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">14:45</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">14:45</div>
     </div>
     <div class="time-content">
       <div class="place-name">🎢 Tower of Terror</div>
@@ -2846,8 +2845,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">16:30</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">16:30</div>
     </div>
     <div class="time-content">
       <div class="place-name">🍽 저녁: Magellan's</div>
@@ -2868,8 +2867,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">20:00</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">20:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚶 파크 퇴장</div>
@@ -2883,8 +2882,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">20:00</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">20:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚝 TDS역(20:00) → TDL역(20:09) [리조트라인, 9분]</div>
@@ -2903,12 +2902,12 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">20:10</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">20:10</div>
     </div>
     <div class="time-content">
       <div class="place-name">🧳 호텔 짐 회수</div>
-      <div class="place-local">Tokyo Disney Hotel</div>
+      <div class="place-local">Tokyo Disneyland Hotel</div>
       <div class="description">TDL역에서 호텔까지 도보 약 3분. 체크아웃 시 프론트에 보관 요청한 짐 수령 (무료). 짐 찾고 TDL 버스터미널 이스트로 도보 3분.</div>
       <div class="detail-tags">
         <span class="dtag dtag-time">⏱ 10분</span>
@@ -2920,8 +2919,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">20:25</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">20:25</div>
     </div>
     <div class="time-content">
       <div class="place-name">🚌 TDL 버스터미널(20:25) → 하네다공항(21:10) [리무진버스, 30~45분]</div>
@@ -2941,14 +2940,14 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
           </div>
         </div>
         <div style="margin-bottom:8px">
-          <span style="font-weight:600">대안: TDS 버스터미널 노스 4번</span> — 짐 없이 TDS에서 바로 탈 때
+          <span style="font-weight:600">대안: TDS 버스터미널 노스 4번</span> — TDS 정문 나와 북쪽 도보 2분. 짐이 없고 TDS에서 바로 출발할 때 편리. 하네다행 동일 노선 정차.
           <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
             <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea+Bus+Terminal+North" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
             <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6280,139.8870&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
           </div>
         </div>
         <div>
-          <span style="font-weight:600">디즈니랜드 호텔 앞</span> — 일부 노선 호텔 직접 정차
+          <span style="font-weight:600">디즈니랜드 호텔 앞</span> — 호텔 정문 로터리에서 승차. 일부 리무진버스 노선이 직접 정차하므로 짐이 많을 때 가장 편리. 운행 여부는 당일 프런트에서 확인.
           <div style="margin-top:4px;display:flex;gap:6px;flex-wrap:wrap">
             <a class="btn-map btn-map-primary" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Disneyland+Hotel" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">📍 Google Maps</a>
             <a class="btn-map btn-map-secondary" href="https://www.google.com/maps/dir/?api=1&destination=35.6355,139.8785&travelmode=walking" target="_blank" rel="noopener" style="font-size:11px;padding:6px 10px;min-height:36px">🧭 길찾기</a>
@@ -2963,8 +2962,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#2ECC71"></div>
-      <div class="time-label" style="color:#2ECC71">21:30</div>
+      <div class="time-dot time-dot-day3"></div>
+      <div class="time-label time-label-day3">21:30</div>
     </div>
     <div class="time-content">
       <div class="place-name">♨ 하네다공항 이즈미 천공 온천</div>
@@ -3108,8 +3107,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   
   <div class="time-block">
     <div class="time-marker">
-      <div class="time-dot" style="background:#F9A826"></div>
-      <div class="time-label" style="color:#F9A826">02:00</div>
+      <div class="time-dot time-dot-day4"></div>
+      <div class="time-label time-label-day4">02:00</div>
     </div>
     <div class="time-content">
       <div class="place-name">✈ KE752 HND → ICN</div>
@@ -3139,8 +3138,8 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   <div class="section"><div class="section-title"><span class="icon">🏨</span> 숙소</div>
     <div class="hotel-card selected">
       <span class="hotel-tier tier-premium">accommodation ⭐</span>
-      <div style="font-size:16px;font-weight:700;margin-top:4px">Tokyo Disney Hotel</div>
-      <div style="font-size:12px;color:var(--text-tertiary)">東京ディズニーホテル</div>
+      <div style="font-size:16px;font-weight:700;margin-top:4px">Tokyo Disneyland Hotel</div>
+      <div style="font-size:12px;color:var(--text-tertiary)">東京ディズニーランドホテル</div>
       <div style="font-size:13px;color:var(--text-secondary);margin-top:8px;line-height:1.7">
         📍 1-13 Maihama, Urayasu, Chiba 279-8505<br>
         도쿄 디즈니 리조트 공식 호텔. 파크 접근 도보 가능.<br>
@@ -3244,7 +3243,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
 (function(){
   var wrapper=document.getElementById('pagesWrapper'),pagination=document.getElementById('pagination'),pageLabel=document.getElementById('pageLabel');
   var dots=pagination.querySelectorAll('.dot'),pages=wrapper.querySelectorAll('.page'),totalPages=pages.length,currentPage=0;
-  var pageNames=["여행 개요", "장소·맛집", "도착일 — 시내 관광 + 호텔 체크인", "Tokyo Disneyland 종일", "Tokyo DisneySea → 공항", "귀국일 (새벽 출발)", "숙소·가이드"];
+  var pageNames=["여행 개요", "장소·맛집", "도착일 — 시내 관광 + 호텔 체크인", "Tokyo Disneyland 종일", "Tokyo DisneySea 종일 → 저녁 공항 이동", "귀국일 (새벽 출발)", "숙소·가이드"];
 
   function updatePagination(){var s=wrapper.scrollLeft,w=wrapper.offsetWidth;currentPage=Math.round(s/w);dots.forEach(function(d,i){d.classList.toggle('active',i===currentPage)});pageLabel.textContent=(currentPage+1)+' / '+totalPages;var p=document.getElementById('navPrev'),n=document.getElementById('navNext');if(p)p.disabled=currentPage===0;if(n)n.disabled=currentPage===totalPages-1}
   wrapper.addEventListener('scroll',function(){requestAnimationFrame(updatePagination)});
@@ -3276,7 +3275,7 @@ html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(
   // Places map
   var mapEl=document.getElementById('placesMap');
   if(mapEl&&typeof L!=='undefined'){
-    var mapData=[{"lat": 35.6329, "lng": 139.8804, "name": "Tokyo Disney Hotel", "nameLocal": "東京ディズニーホテル", "googleMapsUrl": "", "emoji": "🏨", "color": "#6C5CE7", "cat": "accommodation", "isHotel": true}, {"lat": 35.5454613, "lng": 139.76872219999998, "name": "Terminal 3", "nameLocal": "羽田空港 第3ターミナル", "googleMapsUrl": "https://maps.google.com/?cid=8215175827991883231&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6675016, "lng": 139.70610259999998, "name": "Harajuku Gyozarou", "nameLocal": "餃子楼 原宿 竹下通り", "googleMapsUrl": "https://maps.google.com/?cid=10029775272822189018&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6702, "lng": 139.7026, "name": "하라주쿠 타케시타도리", "nameLocal": "竹下通り", "googleMapsUrl": "", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6618, "lng": 139.6982, "name": "시부야 파르코 6F (CYBERSPACE SHIBUYA)", "nameLocal": "渋谷PARCO 6F", "googleMapsUrl": "", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6361543, "lng": 139.8838749, "name": "Maihama Station", "nameLocal": "舞浜駅", "googleMapsUrl": "https://maps.google.com/?cid=1278689829795737539&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6368361, "lng": 139.87815899999998, "name": "Tokyo Disneyland Hotel", "nameLocal": "東京ディズニーランドホテル", "googleMapsUrl": "https://maps.google.com/?cid=10526911917217625720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6321, "lng": 139.8836, "name": "焼肉トラジ 이크스피아리점", "nameLocal": "焼肉トラジ イクスピアリ店", "googleMapsUrl": "", "emoji": "🍽", "color": "#E84545", "cat": "restaurant", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "도쿄 디즈니랜드", "nameLocal": "東京ディズニーランド", "googleMapsUrl": "", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.631093, "lng": 139.8790797, "name": "La Taverne de Gaston", "nameLocal": "ラ・タベルヌ・ド・ガストン 東京ディズニーランド", "googleMapsUrl": "https://maps.google.com/?cid=2768463279291184480&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "Disney Harmony in Color", "nameLocal": "東京ディズニーランド", "googleMapsUrl": "", "emoji": "📍", "color": "#6C5CE7", "cat": "show", "isHotel": false}, {"lat": 35.6310489, "lng": 139.8812591, "name": "Queen of Hearts Banquet Hall", "nameLocal": "クイーン・オブ・ハートのバンケットホール 東京ディズニーランド", "googleMapsUrl": "https://maps.google.com/?cid=7815233773618735550&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6267, "lng": 139.885, "name": "도쿄 디즈니씨", "nameLocal": "東京ディズニーシー", "googleMapsUrl": "", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.626689899999995, "lng": 139.88436529999998, "name": "Vulcania Restaurant", "nameLocal": "ヴォルケイニア・レストラン 東京ディズニーシー", "googleMapsUrl": "https://maps.google.com/?cid=8817724709305670157&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6259331, "lng": 139.8852873, "name": "Magellan's", "nameLocal": "マゼランズ 東京ディズニーシー", "googleMapsUrl": "https://maps.google.com/?cid=7191302284011855408&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}];
+    var mapData=[{"lat": 35.6329, "lng": 139.8804, "name": "Tokyo Disneyland Hotel", "nameLocal": "東京ディズニーランドホテル", "googleMapsUrl": "", "emoji": "🏨", "color": "#6C5CE7", "cat": "accommodation", "isHotel": true}, {"lat": 35.5454613, "lng": 139.76872219999998, "name": "Terminal 3", "nameLocal": "羽田空港 第3ターミナル", "googleMapsUrl": "https://maps.google.com/?cid=8215175827991883231&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6675016, "lng": 139.70610259999998, "name": "Harajuku Gyozarou", "nameLocal": "餃子楼 原宿 竹下通り", "googleMapsUrl": "https://maps.google.com/?cid=10029775272822189018&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6702, "lng": 139.7026, "name": "하라주쿠 타케시타도리", "nameLocal": "竹下通り", "googleMapsUrl": "", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6618, "lng": 139.6982, "name": "시부야 파르코 6F (CYBERSPACE SHIBUYA)", "nameLocal": "渋谷PARCO 6F", "googleMapsUrl": "", "emoji": "🛍", "color": "#FF69B4", "cat": "shopping", "isHotel": false}, {"lat": 35.6361543, "lng": 139.8838749, "name": "Maihama Station", "nameLocal": "舞浜駅", "googleMapsUrl": "https://maps.google.com/?cid=1278689829795737539&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6368361, "lng": 139.87815899999998, "name": "Tokyo Disneyland Hotel", "nameLocal": "東京ディズニーランドホテル", "googleMapsUrl": "https://maps.google.com/?cid=10526911917217625720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6321, "lng": 139.8836, "name": "焼肉トラジ 이크스피아리점", "nameLocal": "焼肉トラジ イクスピアリ店", "googleMapsUrl": "", "emoji": "🍽", "color": "#E84545", "cat": "restaurant", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "도쿄 디즈니랜드", "nameLocal": "東京ディズニーランド", "googleMapsUrl": "", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.631093, "lng": 139.8790797, "name": "La Taverne de Gaston", "nameLocal": "ラ・タベルヌ・ド・ガストン 東京ディズニーランド", "googleMapsUrl": "https://maps.google.com/?cid=2768463279291184480&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6329, "lng": 139.8804, "name": "Disney Harmony in Color", "nameLocal": "東京ディズニーランド", "googleMapsUrl": "", "emoji": "📍", "color": "#6C5CE7", "cat": "show", "isHotel": false}, {"lat": 35.6310489, "lng": 139.8812591, "name": "Queen of Hearts Banquet Hall", "nameLocal": "クイーン・オブ・ハートのバンケットホール 東京ディズニーランド", "googleMapsUrl": "https://maps.google.com/?cid=7815233773618735550&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6267, "lng": 139.885, "name": "도쿄 디즈니씨", "nameLocal": "東京ディズニーシー", "googleMapsUrl": "", "emoji": "🏰", "color": "#7B68EE", "cat": "theme_park", "isHotel": false}, {"lat": 35.626689899999995, "lng": 139.88436529999998, "name": "Vulcania Restaurant", "nameLocal": "ヴォルケイニア・レストラン 東京ディズニーシー", "googleMapsUrl": "https://maps.google.com/?cid=8817724709305670157&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}, {"lat": 35.6259331, "lng": 139.8852873, "name": "Magellan's", "nameLocal": "マゼランズ 東京ディズニーシー", "googleMapsUrl": "https://maps.google.com/?cid=7191302284011855408&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA", "emoji": "📍", "color": "#6C5CE7", "cat": "etc", "isHotel": false}];
     var pmap=L.map('placesMap',{zoomControl:true,attributionControl:false}).setView([35.6329,139.8804],13);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(pmap);
     window._placesMap=pmap;window._placeMarkers=[];
